@@ -1,6 +1,7 @@
 #include<stdio.h>
 
 char board[10]={' ','1','2','3','4','5','6','7','8','9'};
+char symb = 124;
 
 void drawTable()
 {
@@ -11,19 +12,19 @@ void drawTable()
         {
             continue;
         }
+        
+        if(i==4|i==7)
+        {
+            printf("\n");
+            printf("-----------------");
+            
+            
+        }
         if(i==4|i==7)
         {
             printf("\n");
         }
-        printf("%c",board[i]);
+        printf(" %c ",board[i]);
+        printf(" | ");
         
     }
-    //Styling still needs to be added.
-}
-
-int main()
-{
-    drawTable();
-
-    return 0;
-}
