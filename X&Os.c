@@ -13,10 +13,12 @@ void drawTable()
             continue;
         }
         
+        
+        
         if(i==4|i==7)
         {
             printf("\n");
-            printf("-----------------");
+            printf(" -------------------");
             
             
         }
@@ -24,7 +26,21 @@ void drawTable()
         {
             printf("\n");
         }
+        if(i == 1|i==4|i==7)
+        {
+            printf(" | ");
+        }
+        
         printf(" %c ",board[i]);
         printf(" | ");
         
     }
+    
+}
+
+int main()
+{
+    drawTable();
+
+    return 0;
+}
