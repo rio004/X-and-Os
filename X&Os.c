@@ -92,4 +92,24 @@ int isWinner(char player)
 
 int main(void)
 {
+    drawTable();
+
+    while (1)
+    {
+        getMove('X');
+        drawTable();
+        if (isWinner('X')) {
+            printf("\n X has won the game!!");
+            break;
+        }
+
+        getMove('O');
+        drawTable();
+        if (isWinner('O')) {
+            printf("\n O has won the game!!");
+            break;
+        }
+    }
+
+    return 0;
 }
